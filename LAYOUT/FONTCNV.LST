@@ -1,0 +1,80 @@
+' Little Font Grabber
+' Written by J.Horneman
+' Start : 23-1-1991
+'
+' ********************************
+' *  This program is a part of   *
+' *      A M B E R S T A R       *
+' * © 1991 Thalion Software GmbH *
+' ********************************
+'
+' This program allows the user to select up to 4 .PI1-files from which a
+' 8 pixel wide, 5 pixel high, 1 bitplane font can be grabbed and saved
+' away as a raw data file.
+'
+old_rez%=XBIOS(4)
+IF old_rez%=2
+  ALERT 3," Sadly, this program | only works with | colour monitors... ",1," Sob ",dummy%
+  EDIT
+ENDIF
+'
+OPTION BASE 1
+'
+font$=SPACE$(800)                  ! Font data buffer
+buffer$=SPACE$(32066)           ! Screen buffer
+buf_ptr%=VARPTR(buffer$)        ! Buffer base pointer
+pic_count%=0                    ! Number of grabbed pictures
+font_ptr%=1
+'
+DO
+  CLS
+  PRINT "Select a .PI1 file."
+  FILESELECT "I:\LAYOUT\*.PI1","",file$
+  EXIT IF file$=""
+  '
+  BLOAD file$,buf_ptr%
+  pic_rez%=DPEEK(buf_ptr%)
+  IF pic_rez%>0
+    ALERT 3," Hey! This is no | low-rez picture ! ",1," Barf ",dummy%
+  ELSE
+    screen$=MID$(buffer$,35,32000)      ! Cut screen
+    IF old_rez%=1                       ! Low rez if necessary
+      VOID XBIOS(5,L:-1,L:-1,W:0)
+    ENDIF
+    VOID XBIOS(6,L:buf_ptr%+2)          ! Set picture's palette
+    HIDEM                               ! Hide mouse
+    SPUT screen$                        ! Show picture & wait for key
+    VOID INP(2)
+    SHOWM                               ! Show mouse
+    IF old_rez%=1                       ! Med rez if necessary
+      VOID XBIOS(5,L:-1,L:-1,W:1)
+    ENDIF
+    '
+    CLS
+    REPEAT
+      INPUT "Number of characters to be grabbed : ",nr_chars%
+    UNTIL nr_chars%>=0 AND nr_chars%=INT(nr_chars%) AND nr_chars%=<33
+    EXIT IF nr_chars%=0
+    '
+    FOR char%=0 TO nr_chars%-1
+      FOR line%=0 TO 4
+        MID$(font$,font_ptr%,1)=CHR$(PEEK(buf_ptr%+34+(char%*6+line%)*160))
+        INC font_ptr%
+      NEXT line%
+    NEXT char%
+    '
+    INC pic_count%
+  ENDIF
+LOOP
+'
+IF pic_count%>0
+  CLS
+  PRINT "Select the output-file."
+  FILESELECT "I:\NUCLEUS\*.GFX","",out_file$
+  '
+  IF out_file$<>""
+    BSAVE out_file$,VARPTR(font$),font_ptr%-1
+  ENDIF
+ENDIF
+'
+EDIT
