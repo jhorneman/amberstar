@@ -6,7 +6,7 @@
 ; ********************************
 ; *    This file is a part of    *
 ; *       A M B E R S T A R      *
-; * ½ 1991 Thalion Software GmbH *
+; * Â© 1991 Thalion Software GmbH *
 ; ********************************
 
 ;   "Mr. Blue you did it right
@@ -3218,11 +3218,11 @@ Inv2_target_hbl:
 ; ...
              .ENDIF 
              .IF Language=3
-Skills_name: .DC.b 1,8,"FŽHIGKEITEN",1,15,0 ; German
+Skills_name: .DC.b 1,8,"FÃ„HIGKEITEN",1,15,0 ; German
 Attrs_name:  .DC.b 1,8,"ATTRIBUTE",1,15,0
 Age_txt:     .DC.b "ALTER: ",0
 Language_txt:          .DC.b 1,8,"SPRACHEN",1,15,0
-Body_txt:    .DC.b 1,8,"K™RPER",1,15,0
+Body_txt:    .DC.b 1,8,"KÃ–RPER",1,15,0
 Mind_txt:    .DC.b 1,8,"GEIST",1,15,0
 Weight_name: .DC.b 1,15,2,2,"GEWICHT",0
 Gold_txt:    .DC.b "GOLD",0
@@ -3233,14 +3233,14 @@ Male_name:   .DC.b "MANN",0
 Female_name: .DC.b "FRAU",0
 Both_txt:    .DC.b "BEIDE",0
 Sex_use_txt: .DC.b 1,1,"GESCHLECHT:",1,15,0
-Hands_txt:   .DC.b "HŽNDE   : ",0
+Hands_txt:   .DC.b "HÃ„NDE   : ",0
 Fingers_txt: .DC.b "FINGER  : ",0
 Classes_txt: .DC.b 1,1,"---- KLASSEN ----",1,15,0
 Damage_txt:  .DC.b "SCHADEN : ",0
 Protection_txt:        .DC.b "SCHUTZ  : ",0
 Weight2_txt: .DC.b 1,1,"GEWICHT : ",1,15,0
 Attr2_txt:   .DC.b 1,1,"ATTRIBUT",1,15,0
-Skill2_txt:  .DC.b 1,1,"FŽHIGKEIT",1,15,0
+Skill2_txt:  .DC.b 1,1,"FÃ„HIGKEIT",1,15,0
 Magic_txt:   .DC.b 1,1,"MAGIE",1,15,0
 Cursed_txt:  .DC.b 1,9,"VERFLUCHT",1,15,0
              .ENDIF 

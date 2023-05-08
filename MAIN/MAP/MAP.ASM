@@ -6,7 +6,7 @@
 ; ********************************
 ; *    This file is a part of    *
 ; *       A M B E R S T A R      *
-; * ½ 1991 Thalion Software GmbH *
+; * Â© 1991 Thalion Software GmbH *
 ; ********************************
 
 ;   "Let us be together, let's pretend that we

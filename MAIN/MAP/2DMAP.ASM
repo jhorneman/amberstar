@@ -6,7 +6,7 @@
 ; ********************************
 ; *    This file is a part of    *
 ; *       A M B E R S T A R      *
-; * Ω 1991 Thalion Software GmbH *
+; * ¬© 1991 Thalion Software GmbH *
 ; ********************************
 
 ;   "Shall we seal the truth of life
@@ -18,7 +18,7 @@
 
 ; NOTES :
 ;   - Order of arrays in ICON_DAT.nnn is vital !!!
-;   - If movement is Åberhaupt impossible, this should be detected before
+;   - If movement is √ºberhaupt impossible, this should be detected before
 ;     the movement routines are called.
 ;   - It is impossible to display all the 2D map using only the Nucleus
 ;     graphic functions, therefore these routines must be edited for the
@@ -668,7 +668,7 @@ Display_night_circle:
              beq       .Exit                ; X-ray specs !!!
              lea.l     Graphics_buf,a5      ; Initialize registers
              move.w    #13*8,d5
-             move.w    Current_radius,d1    ; Circle Åberhaupt ?
+             move.w    Current_radius,d1    ; Circle √ºberhaupt ?
              bne.s     .Ok
              tst.w     New_radius
              beq       .Exit

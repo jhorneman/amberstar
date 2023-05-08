@@ -4,7 +4,7 @@
 ; ********************************
 ; *    This file is a part of    *
 ; *       A M B E R S T A R      *
-; * ½ 1991 Thalion Software GmbH *
+; * Â© 1991 Thalion Software GmbH *
 ; ********************************
 
              .XDEF Bot_corners,Bot_masks

@@ -942,7 +942,7 @@ Banish_demon:
 Map_view:    
              jsr       Handle_spell         ; Try
              bmi       .Exit
-             movea.l   Mapd_ptr,a0          ; šberhaupt possible ?
+             movea.l   Mapd_ptr,a0          ; Ãœberhaupt possible ?
              move.b    Map_special(a0),d0
              btst      #3,d0
              bne.s     .Do_it

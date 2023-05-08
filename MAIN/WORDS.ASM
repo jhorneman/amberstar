@@ -6,7 +6,7 @@
 ; ********************************
 ; *    This file is a part of    *
 ; *       A M B E R S T A R      *
-; * Ω 1991 Thalion Software GmbH *
+; * ¬© 1991 Thalion Software GmbH *
 ; ********************************
 
 ;   "Lost on a wave and then after
@@ -1068,17 +1068,17 @@ Input_mask_table:
              .DC.b "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
              .DC.b -1,-1,-1,-1,-1,-1        ; [\]^_`
              .DC.b "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-             .DCB.b 6,-1                    ; {|}~Ä
-             .DC.b "ö",-1,-1,"é"            ; ÅÇÉÑ
-             .DCB.b 9,-1                    ; Ö...ç
-             .DC.b "é"
-             .DCB.b 5,-1                    ; è...ì
-             .DC.b "ô"
-             .DCB.b 4,-1                    ; ï...ò
-             .DC.b "ôö"
-             .DCB.b 3,-1                    ; õ...ù
-             .DC.b "û"
-             .DCB.b 97,-1                   ; ü...ˇ
+             .DCB.b 6,-1                    ; {|}~√á
+             .DC.b "√ú",-1,-1,"√Ñ"            ; √º√©√¢√§
+             .DCB.b 9,-1                    ; √†...√¨
+             .DC.b "√Ñ"
+             .DCB.b 5,-1                    ; √Ö...√¥
+             .DC.b "√ñ"
+             .DCB.b 4,-1                    ; √≤...√ø
+             .DC.b "√ñ√ú"
+             .DCB.b 3,-1                    ; ¬¢...¬•
+             .DC.b "√ü"
+             .DCB.b 97,-1                   ; ∆í...¬Ø
              .EVEN 
 
 

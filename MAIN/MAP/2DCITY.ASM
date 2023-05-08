@@ -6,7 +6,7 @@
 ; ********************************
 ; *    This file is a part of    *
 ; *       A M B E R S T A R      *
-; * ½ 1991 Thalion Software GmbH *
+; * Â© 1991 Thalion Software GmbH *
 ; ********************************
 
 ;   "To know there's so many ways

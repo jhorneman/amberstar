@@ -6,7 +6,7 @@
 ; ********************************
 ; *    This file is a part of    *
 ; *       A M B E R S T A R      *
-; * Ω 1991 Thalion Software GmbH *
+; * ¬© 1991 Thalion Software GmbH *
 ; ********************************
 
 ;   "Let us sing the song it is
@@ -16,7 +16,7 @@
 ;   Let's Pretend, Anderson, Bruford, Wakeman & Howe, 1989
 
 ; NOTE :
-;  - If movement is Åberhaupt impossible, this should be detected before
+;  - If movement is √ºberhaupt impossible, this should be detected before
 ;    the movement routines are called.
 ;  - The [Blit] routines access the screen directly and must be adapted for
 ;    the AMIGA.
